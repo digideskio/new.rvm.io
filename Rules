@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require "redcarpet"
+require "erubis"
+
+compile "/assets/*" do
+  case item[:extension]
+    when "less" then filter :less
+    when "scss", "sass" then filter :sass, :syntax => :scss
+  end
+end
+
+route "/assets/*" do
+  ext =
+    case item[:extension]
+    when "scss", "sass", "less"
+      "css"
+    else
+      item[:extension]
+    end
+
+  item.identifier.chop + "." + ext
+end
+
+route  "*" do
+  item.identifier + "index.html"
+end
+
+compile "*" do
+  case item[:extension]
+  when "erb"
+    filter :erubis
+    layout item.attributes[:layout] || "bare"
+  when "md" then filter :redcarpet
+    filter :redcarpet
+    layout item.attributes[:layout] || "default"
+  end
+end
+
+layout "*", :erubis

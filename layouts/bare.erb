@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html itemscope lang="en">
+  <head>
+    <title>RVM - The Ruby Version Manage</title>
+    <% @site.config[:fonts].each do |f| %>
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<%= f %>" />
+    <% end %>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/rvm.css" />
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+</head>
+<body id="rvm">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <header role="banner" class="container">
+        <nav>
+          <%= site_navigation(@items) %>
+        </nav>
+
+        <p class="brand">RVM</p>
+      </header>
+    </div>
+  </div>
+  <div class="jumbotron<% if @item.identifier == "/" %> jumbotron-home<% else %> jumbotron-not-home<% end %>">
+    <div class="container">
+      <h1>Ruby Version Manager (RVM)</h1>
+      <% if @item.attributes[:jumbotron_as_phrase] %><p><%= @item[:title] %></p><% else %><h1><%= @item[:title] %></h1><% end %>
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <script type="text/javscript">
+    $('.dropdown-toggle').dropdown()
+  </script>
+</body>

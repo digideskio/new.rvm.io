@@ -1,0 +1,29 @@
+---
+dropdown: false
+nav: Tutorials
+title: Integration tutorials.
+---
+
+<div class="row-fluid left margin-row">
+  <div class="span12">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Tutorial</th>
+          <th>Doc</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% discover_subpages(@item).each do |s| %>
+          <tr>
+            <td><%= s[:title] %></td>
+            <td><%= s[:path] %></td>
+            <td><%= s[:last_modified] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </table>
+  </div>
+</div>

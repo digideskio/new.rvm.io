@@ -1,0 +1,80 @@
+---
+jumbotron_as_phrase: true
+nav: Home
+title: The only thing you'll ever need to manage and cut your Rubies
+---
+
+<div class="row-fluid">
+  <div class="span6">
+    <h2>Get started by installing RVM</h2>
+    <p>
+      <code>rvm</code> is easy to install if you know how to use your
+      terminal.  On most Linux you can type <code>CTRL+ALT+T</code>
+      anywhere and a terminal will open for you. On OS X you can use
+      terminal.app.
+    </p>
+    <ul>
+      <li>If you have trouble please file a ticket <i>with</i> the <code>--debug</code> flag.</li>
+      <li>By default <code>rvm</code> will <i>not</i> install required dependencies</li>
+      <li>You must make sure that you have your SSL certificates installed.</li>
+    </ul>
+
+    <%= use_example("home/rvm-install") %>
+  </div>
+
+  <div class="span6">
+    <h2>Contribute to the RVM project</h2>
+    <p>
+      The easiest way to contribute to <code>rvm</code> is to report
+      any bugs you might think exist, even if you think they might
+      not actually be bugs.  You can also fork our source and send
+      patch requests.
+    </p>
+
+    <ul>
+      <li>You can contribute the most by filing/testing tickets.</li>
+      <li><code>rvm</code> is community-driven.</li>
+      <li>All features implemented in <code>rvm</code> are community-requested and driven.</li>
+    </ul>
+
+    <%= use_example("home/rvm-fork") %>
+  </div>
+</div>
+
+<div class="row-fluid home-row">
+  <div class="span4">
+    <h2>Installing Rubies</h2>
+    <p>
+      <code>rvm</code> tries to make your life easier by allowing you
+      to install multiple versions of <code>ruby</code> on the same
+      system. You can fuzzy install, install globally, install on a
+      single user or even a specific version of <code>ruby</code>.
+    </p>
+
+    <%= use_example("home/install") %>
+  </div>
+
+  <div class="span4">
+    <h2>Upgrading Rubies</h2>
+    <p>
+      <code>rvm</code> tries to make your life easier by allowing you
+      to upgrade from one version of <code>ruby</code> to another
+      without much effort on your part, and if you use Gemsets you
+      can also upgrade those too.
+    </p>
+
+    <%= use_example("home/upgrading") %>
+  </div>
+
+  <div class="span4">
+    <h2>RVM has Gemsets</h2>
+    <p>
+      <code>rvm</code> includes a feature called Gemsets that allow you
+      to isolate your Gems without having to use vendor. Gemsets can be
+      managed by <code>bundle</code> or by hand and help to avoid
+      conflicts.
+    </p>
+
+    <%= use_example("home/gemsets") %>
+  </div>
+</div>

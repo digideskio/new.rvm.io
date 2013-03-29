@@ -1,0 +1,2 @@
+rvm upgrade 1.9.3 2.0.0
+rvm upgrade ruby-1.9.3-p392 ruby-2.0.0-p0

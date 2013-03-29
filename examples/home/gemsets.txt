@@ -1,0 +1,2 @@
+rvm use 2.0.0@gemset --create
+rvm use 1.9.3@gemset

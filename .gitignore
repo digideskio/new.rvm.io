@@ -1,0 +1,13 @@
+oldcontent/
+.DS_Store
+*.tmproj
+.idea
+*~
+tmp/
+*.swp
+tags
+.bundle/
+public/
+crash.log
+.sass-cache/
+vendor/bundle/

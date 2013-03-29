@@ -1,0 +1,35 @@
+---
+dropdown: false
+title: "Documentation"
+---
+
+<div class="row-fluid left margin-row">
+  <div class="span12">
+    <p>
+      <code>rvm</code> syncs documentation between the app and this website
+      so any documentation below will have an accompanying command (or set)
+      that you can add <code>--help</code> to so you can see it in your
+      terminal as well.
+    </p>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>RVM Command</th>
+          <th>Doc</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% discover_subpages(@item).each do |s| %>
+          <tr>
+            <td><%= s[:title] %></td>
+            <td><%= s[:path] %></td>
+            <td><%= s[:last_modified] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </table>
+  </div>
+</div>
